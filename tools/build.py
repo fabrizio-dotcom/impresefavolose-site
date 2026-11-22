@@ -71,7 +71,7 @@ def page(key, lang, title, desc, body):
         alternates += f'\n<link rel="alternate" hreflang="x-default" href="{public_url(PATHS[key]["it"])}">'
         switch = f'<a class="lang" href="{rel(PATHS[key][other], current)}" hreflang="{other}" lang="{other}">{ui["switch"]}</a>'
     css = rel("assets/site.css", current)
-    font = rel("assets/fonts/source-serif-4-latin-600-normal.woff2", current)
+    font = rel("assets/fonts/cormorant-garamond-latin-600-normal.woff2", current)
     home = rel(PATHS["home"][lang], current)
     return f"""<!doctype html>
 <html lang="{LANG_TAG[lang]}">

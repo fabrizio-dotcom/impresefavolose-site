@@ -1,30 +1,35 @@
 /* Self-hosted fonts (SIL Open Font License): no calls to Google */
-@font-face { font-family: "Source Serif 4"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/source-serif-4-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "Source Sans 3"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/source-sans-3-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "Source Sans 3"; font-weight: 400; font-style: italic; font-display: swap; src: url("fonts/source-sans-3-latin-400-italic.woff2") format("woff2"); }
-@font-face { font-family: "Source Sans 3"; font-weight: 600 700; font-style: normal; font-display: swap; src: url("fonts/source-sans-3-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-weight: 300; font-style: normal; font-display: swap; src: url("fonts/cormorant-garamond-latin-300-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-weight: 300; font-style: italic; font-display: swap; src: url("fonts/cormorant-garamond-latin-300-italic.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-weight: 600; font-style: italic; font-display: swap; src: url("fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 300; font-style: normal; font-display: swap; src: url("fonts/outfit-latin-300-normal.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/outfit-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/outfit-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/outfit-latin-600-normal.woff2") format("woff2"); }
 
 /* Imprese Favolose: static site. One stylesheet for every page.
-   Palette: dolomite stone, lake slate, larch gold. Draft: colours to confirm with Fabrizio. */
+   Palette: deep alpine forest, larch-wood amber, dolomite-stone page ground.
+   Matches the style, fonts and palette already live at impresefavolose.it. */
 :root {
-  --bg: #f6f4ef;          /* dolomite stone */
+  --bg: #f7f8f9;          /* dolomite stone */
   --surface: #ffffff;
-  --ink: #1d2430;         /* night on the rock */
-  --muted: #59616d;
-  --line: #ddd8cc;
-  --accent: #2f4f6b;      /* lake slate */
+  --ink: #1c2b1e;         /* alpine forest, night green */
+  --muted: #5b685c;
+  --line: #e1e0db;
+  --accent: #c4874a;      /* larch-wood amber */
   --accent-ink: #ffffff;
-  --gold: #9a7431;        /* larch, used sparingly */
-  --band: #e9e5da;
-  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --font-body: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --gold: #dea872;        /* amber, lightened: eyebrows, small labels */
+  --band: #f2ece2;        /* pale amber-tinted panel */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Outfit", "Segoe UI", system-ui, -apple-system, sans-serif;
   --measure: 68ch;
   --radius: 6px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14181f; --surface: #1c222b; --ink: #e8eaee; --muted: #a6adb8;
-    --line: #2e3642; --accent: #8fb3d1; --accent-ink: #10151b; --gold: #d8ad62; --band: #1f2630;
+    --bg: #14181a; --surface: #1b231c; --ink: #e9ece7; --muted: #a4ada3;
+    --line: #2b332c; --accent: #d9a364; --accent-ink: #1c2b1e; --gold: #e8bd8c; --band: #232a22;
     color-scheme: dark;
   }
 }
@@ -33,7 +38,7 @@
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
-  font-family: var(--font-body); font-size: 1.075rem; line-height: 1.65;
+  font-family: var(--font-body); font-size: 1.05rem; line-height: 1.65; font-weight: 400;
 }
 a { color: var(--accent); text-underline-offset: 3px; }
 a:focus-visible, .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
@@ -47,45 +52,65 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--gold); outline-of
 }
 .prose { max-width: var(--measure); }
 
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; margin: 0 0 .5em; }
-h1 { font-size: clamp(2rem, 5vw, 3.1rem); letter-spacing: -.01em; }
-h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); }
-h3 { font-size: 1.2rem; }
+h1, h2 { font-family: var(--font-display); font-weight: 300; line-height: 1.15; margin: 0 0 .5em; }
+h3 { font-family: var(--font-body); font-weight: 600; line-height: 1.3; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: -.01em; }
+h1 em, h2 em { font-style: italic; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
+h3 { font-size: .92rem; text-transform: uppercase; letter-spacing: .06em; }
 p { margin: 0 0 1em; }
-.eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: .6em; }
+.eyebrow {
+  display: inline-block; font-size: .78rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: .9em; padding: 5px 14px; border: 1px solid rgba(196, 135, 74, .4); border-radius: 999px;
+}
 
 /* Header */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); }
 .site-header .wrap { display: flex; align-items: center; gap: 12px 24px; padding-block: 14px; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; margin-right: auto; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; margin-right: auto; }
 .mark { width: 22px; height: 22px; background: var(--accent); clip-path: polygon(0 100%, 38% 22%, 55% 55%, 72% 0, 100% 100%); }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; }
-.site-nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: .98rem; padding: 4px 0; border-bottom: 2px solid transparent; }
+.site-nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .95rem; padding: 4px 0; border-bottom: 2px solid transparent; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { border-bottom-color: var(--gold); }
-.lang { font-size: .9rem; font-weight: 600; border: 1px solid var(--line); border-radius: var(--radius); padding: 3px 10px; text-decoration: none; }
+.lang { font-size: .88rem; font-weight: 500; border: 1px solid var(--line); border-radius: var(--radius); padding: 3px 10px; text-decoration: none; }
 
-/* Hero and page heads */
-.hero { padding-block: clamp(48px, 9vw, 104px) clamp(32px, 6vw, 64px); border-bottom: 1px solid var(--line); }
-.hero h1 { max-width: 20ch; }
-.lead { font-size: 1.2rem; max-width: 60ch; color: var(--ink); }
-.page-head { padding-block: clamp(40px, 7vw, 80px) 28px; border-bottom: 1px solid var(--line); }
-.page-head p { max-width: 60ch; color: var(--muted); font-size: 1.12rem; }
+/* Hero and page heads: the dark alpine band */
+.hero {
+  background: var(--ink); color: #fff;
+  padding-block: clamp(56px, 10vw, 120px) clamp(40px, 7vw, 104px);
+}
+.hero h1 { max-width: 22ch; color: #fff; }
+.hero .eyebrow { color: var(--gold); }
+.hero .lead, .lead { font-size: 1.2rem; max-width: 60ch; }
+.hero .lead { color: rgba(255, 255, 255, .72); }
+.page-head { background: var(--ink); color: #fff; padding-block: clamp(48px, 8vw, 88px) clamp(32px, 6vw, 56px); }
+.page-head h1 { color: #fff; }
+.page-head p { max-width: 60ch; color: rgba(255, 255, 255, .72); font-size: 1.12rem; }
+.page-head .eyebrow { color: var(--gold); }
 
 section { padding-block: clamp(32px, 5vw, 56px); }
 section + section { padding-top: 0; }
 
 /* Buttons */
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
-.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; padding: 11px 20px; border-radius: var(--radius); border: 2px solid var(--accent); }
+.btn {
+  display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none;
+  font-family: var(--font-body); font-weight: 500; padding: 12px 22px; border-radius: var(--radius); border: 2px solid var(--accent);
+}
 .btn:hover { filter: brightness(1.08); }
 .btn.ghost { background: transparent; color: var(--accent); }
+.hero .btn.ghost, .page-head .btn.ghost { color: #fff; border-color: rgba(255, 255, 255, .35); }
 
 /* Cards */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 .grid.two { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.card {
+  background: var(--surface); border-radius: var(--radius); padding: 24px;
+  box-shadow: 0 2px 18px rgba(28, 43, 30, .09);
+}
+.card.venture { border-top: 6px solid var(--ink); }
 .card p:last-child { margin-bottom: 0; }
-.tag { display: inline-block; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.tag { display: inline-block; font-size: .76rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
 .more, .more-link a { font-weight: 600; }
 .more-link { margin-top: 18px; }
 
@@ -96,8 +121,11 @@ section + section { padding-top: 0; }
 
 /* Programme phases */
 .phases { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
-.phase { display: grid; grid-template-columns: 56px 1fr; gap: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
-.num { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: var(--font-display); font-size: 1.4rem; }
+.phase {
+  display: grid; grid-template-columns: 56px 1fr; gap: 18px; background: var(--surface);
+  border-radius: var(--radius); padding: 24px; box-shadow: 0 2px 18px rgba(28, 43, 30, .09);
+}
+.num { width: 48px; height: 48px; border-radius: 50%; background: var(--ink); color: var(--gold); display: grid; place-items: center; font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; }
 .phase p:last-child { margin-bottom: 0; }
 @media (max-width: 560px) { .phase { grid-template-columns: 1fr; } }
 
@@ -105,13 +133,13 @@ section + section { padding-top: 0; }
 .list li { margin-bottom: .35em; }
 
 /* Callout */
-.callout { border-top: 3px solid var(--gold); background: var(--surface); border-radius: var(--radius); padding: clamp(22px, 4vw, 40px); }
+.callout { border-top: 3px solid var(--accent); background: var(--surface); border-radius: var(--radius); padding: clamp(22px, 4vw, 40px); box-shadow: 0 2px 18px rgba(28, 43, 30, .09); }
 .callout p { max-width: var(--measure); }
 .contact-line a { font-weight: 600; }
 
 /* Draft questions: visible on previews only, tools/check.py blocks the merge while any remain */
 .draft-note { border: 2px dashed #c0392b; border-radius: var(--radius); padding: 18px 22px; background: var(--surface); }
-.draft-note .eyebrow { color: #c0392b; }
+.draft-note .eyebrow { color: #c0392b; border-color: rgba(192, 57, 43, .4); }
 .draft-note ul { margin-bottom: 0; }
 
 /* Footer */
