@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Builds the Imprese Favolose static site into ../site/ (Italian at the root, English under en/).
 All words live in tools/content.py. site/assets/site.css is edited by hand.
-Every HTML page, _headers and _redirects are generated here: never hand-edit them."""
+Every HTML page, _headers and _redirects are generated here: never hand-edit them.
+
+No-op maintenance note (22 Nov 2026): this comment triggers a fresh Cloudflare Pages deployment
+after fixing the project's Build output directory setting to "site". No content or layout changed."""
 import hashlib
 import os
 from pathlib import Path
