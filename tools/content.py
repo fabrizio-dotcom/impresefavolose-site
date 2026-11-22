@@ -201,9 +201,7 @@ VENTURES = {
         "callout_title": "Know an idea that belongs here?",
         "callout": "We are not running open calls. If you have roots in the mountains and a problem worth solving, write to us.",
     },
-    "draft": [
-        "Other ventures: should any more appear on this page now, for example ventures of your own? If yes, give each a name and one line on the mountain problem it starts from. If not yet, the page shows Smart Mountains only and this question goes.",
-    ],
+    "draft": [],
 }
 
 NOTFOUND = {
