@@ -61,8 +61,8 @@ HOME = {
         ],
         "model_title": "Crescere in montagna, lavorare con la pianura",
         "model": [
-            "In montagna ci sono le competenze tecniche e la capacità di esecuzione. Le imprese che validiamo crescono lì, insieme alle persone del territorio, e servono clienti e attraggono talenti dal Triveneto e dall’Emilia.",
-            "Lavoriamo con le valli alpine e con le città di Padova, Treviso, Vicenza, Verona e Bologna.",
+            "In montagna ci sono le competenze tecniche e la capacità di esecuzione. Le imprese che validiamo crescono lì, insieme alle persone del territorio, e da lì servono clienti e attraggono talenti da tutto il Veneto.",
+            "La nostra base è il Veneto, a partire da Belluno.",
         ],
         "principles_title": "Come scegliamo",
         "principles": [
@@ -93,8 +93,8 @@ HOME = {
         ],
         "model_title": "Grow in the mountains, work with the plains",
         "model": [
-            "The mountains have the technical skills and the capacity to execute. The ventures we validate grow there, with the people of the territory, and serve clients and attract talent from the Triveneto and Emilia.",
-            "We work with the Alpine valleys and with the cities of Padova, Treviso, Vicenza, Verona and Bologna.",
+            "The mountains have the technical skills and the capacity to execute. The ventures we validate grow there, with the people of the territory, and from there serve clients and attract talent from across the Veneto.",
+            "Our base is the Veneto, starting from Belluno.",
         ],
         "principles_title": "How we choose",
         "principles": [
@@ -105,11 +105,7 @@ HOME = {
         "callout_title": "Have an idea born from a mountain problem?",
         "callout": "We are not running open calls. If you have an early-stage idea and team, write us a few lines about the problem, the solution and who is behind it.",
     },
-    "draft": [
-        "Geography: the draft names Padova, Treviso, Vicenza, Verona and Bologna and no longer names Belluno as the base. OK to publish the cities?",
-        "The ‘grow in the mountains, work with the plains’ section follows your Luxottica-model idea without naming Luxottica. Keep it unnamed, or name it?",
-        "Partners: the draft names no partner organisations (the live site names Centro Consorzi as co-developer). Which partners, if any, appear publicly?",
-    ],
+    "draft": [],
 }
 
 # ---------------------------------------------------------------- Programme
@@ -174,51 +170,39 @@ PROGRAMME = {
         "callout_title": "Want to know if your idea is ready for Gate 1?",
         "callout": "Write us a few lines about the problem, the solution and the team. We will tell you whether and how we can help.",
     },
-    "draft": [
-        "Gates: the live site has three (concept validation, pilot deployment, scale readiness). The draft keeps two, Gate 1 concept validation and Gate 2 ready for pilot, and leaves the pilot and scale to the venture. Confirm?",
-        "Removed from the public site: the shareholder percentages and the 5% work-for-equity stake. Do any equity terms go back on, once verified?",
-        "Fab Campaigns’ role is written as ‘advisor and governance, no executive roles’, and Imprese Favolose ‘can stay as advisor or on the board’ after Gate 2. Right wording?",
-    ],
+    "draft": [],
 }
 
 # ---------------------------------------------------------------- Ventures
 VENTURES = {
     "it": {
         "title": "Le imprese · Imprese Favolose",
-        "desc": "Le prime idee con cui Imprese Favolose mette alla prova il proprio metodo.",
+        "desc": "Le idee con cui Imprese Favolose mette alla prova il proprio metodo.",
         "h1": "Le imprese",
-        "sub": "Le prime idee con cui mettiamo alla prova il metodo. Ognuna parte da un problema concreto della montagna.",
+        "sub": "Le idee con cui mettiamo alla prova il metodo partono da un problema concreto della montagna.",
         "ventures": [
-            ("Intelligenza ambientale", "Smart Mountains",
-             "Monitoraggio, modelli predittivi e supporto alle decisioni per chi gestisce infrastrutture, reti e protezione civile in montagna. Il metodo nasce e si prova sul campo in Valtellina e nelle Dolomiti.",
-             (SMART_MOUNTAINS, "smartmountains.net")),
-            ("Patrimonio culturale e naturale", "Valle I.",
-             "Un’esperienza multisensoriale nelle gallerie allagate di una storica miniera delle Dolomiti, tra patrimonio industriale, scienza ambientale e tecnologie immersive. In fase di studio di fattibilità.",
-             None),
+            ("Concept · Monitoraggio dei versanti", "Smart Mountains",
+             "Infrastrutture di monitoraggio dei versanti, costruite con il territorio, a partire dalle Alpi. Monitorare, prevedere, agire: per Comuni, protezione civile, enti parco e gestori di infrastrutture. Nessun dato in vendita: il controllo di ciò che si misura resta a chi governa il territorio.",
+             (SMART_MOUNTAINS + "/it/", "smartmountains.net")),
         ],
         "callout_title": "Conosci un’idea che dovrebbe essere qui?",
         "callout": "Non abbiamo bandi aperti. Se hai radici in montagna e un problema che vale la pena risolvere, scrivici.",
     },
     "en": {
         "title": "Ventures · Imprese Favolose",
-        "desc": "The first ideas Imprese Favolose is using to test its method.",
+        "desc": "The ideas Imprese Favolose uses to test its method.",
         "h1": "Ventures",
-        "sub": "The first ideas we are using to test the method. Each one starts from a concrete mountain problem.",
+        "sub": "The ideas we use to test the method start from a concrete mountain problem.",
         "ventures": [
-            ("Environmental intelligence", "Smart Mountains",
-             "Monitoring, predictive modelling and decision support for those who manage infrastructure, networks and civil protection in the mountains. The method was born, and is tested in the field, in Valtellina and the Dolomites.",
+            ("Concept · Slope monitoring", "Smart Mountains",
+             "Slope-monitoring infrastructure, built with the territory, starting in the Alps. Monitor, predict, act: for municipalities, civil protection, park authorities and infrastructure operators. No data sold: control of what is measured stays with those who govern the land.",
              (SMART_MOUNTAINS, "smartmountains.net")),
-            ("Cultural and natural heritage", "Valle I.",
-             "A multi-sensory experience in the flooded tunnels of a historic Dolomites mine, combining industrial heritage, environmental science and immersive technology. At feasibility stage.",
-             None),
         ],
         "callout_title": "Know an idea that belongs here?",
         "callout": "We are not running open calls. If you have roots in the mountains and a problem worth solving, write to us.",
     },
     "draft": [
-        "Smart Mountains: keep it listed, and with this description? The draft drops the ‘seed round summer 2026’ line and the planned pilots abroad.",
-        "Valle I.: still active, and is ‘at feasibility stage’ right? The draft drops the tunnel length and the four-party joint venture detail.",
-        "You mentioned startups and scale-ups of your own to add. Which ones, and in what words?",
+        "Other ventures: should any more appear on this page now, for example ventures of your own? If yes, give each a name and one line on the mountain problem it starts from. If not yet, the page shows Smart Mountains only and this question goes.",
     ],
 }
 
@@ -230,7 +214,4 @@ NOTFOUND = {
 }
 
 # Site-wide questions shown on the home page draft box.
-SITE_DRAFT = [
-    "Italian is now the main language (at impresefavolose.it/) with English under /en/. The live site is English first. OK?",
-    "Footer: ‘An initiative supported by Fab Campaigns Ltd’. Is that the right public wording for who stands behind Imprese Favolose?",
-]
+SITE_DRAFT = []
