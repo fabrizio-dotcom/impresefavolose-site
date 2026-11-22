@@ -1,0 +1,32 @@
+name: check
+# Runs on every pull request and every push to main. A failure blocks the merge
+# (once main's branch protection requires the "check" status).
+# Changing this file needs Fabrizio's approval (see CLAUDE.md). Actions stay pinned to a full commit SHA.
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Rebuild pages and confirm they match what is committed
+        run: |
+          python3 --version
+          python3 tools/build.py
+          if [ -n "$(git status --porcelain -- site)" ]; then
+            git status --short -- site
+            echo "site/ is out of date: run python3 tools/build.py and commit the result"
+            exit 1
+          fi
+      - name: Health and safety check
+        run: python3 tools/check.py
