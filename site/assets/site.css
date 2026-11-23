@@ -21,6 +21,7 @@
   --accent-ink: #ffffff;
   --gold: #dea872;        /* amber, lightened: eyebrows, small labels */
   --band: #f2ece2;        /* pale amber-tinted panel */
+  --deep: #1c2b1e;        /* alpine forest: hero, page heads, step numbers. Stays dark in both modes */
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Outfit", "Segoe UI", system-ui, -apple-system, sans-serif;
   --measure: 68ch;
@@ -30,6 +31,7 @@
   :root {
     --bg: #14181a; --surface: #1b231c; --ink: #e9ece7; --muted: #a4ada3;
     --line: #2b332c; --accent: #d9a364; --accent-ink: #1c2b1e; --gold: #e8bd8c; --band: #232a22;
+    --deep: #1c2b1e;
     color-scheme: dark;
   }
 }
@@ -76,14 +78,14 @@ p { margin: 0 0 1em; }
 
 /* Hero and page heads: the dark alpine band */
 .hero {
-  background: var(--ink); color: #fff;
+  background: var(--deep); color: #fff;
   padding-block: clamp(56px, 10vw, 120px) clamp(40px, 7vw, 104px);
 }
 .hero h1 { max-width: 22ch; color: #fff; }
 .hero .eyebrow { color: var(--gold); }
 .hero .lead, .lead { font-size: 1.2rem; max-width: 60ch; }
 .hero .lead { color: rgba(255, 255, 255, .72); }
-.page-head { background: var(--ink); color: #fff; padding-block: clamp(48px, 8vw, 88px) clamp(32px, 6vw, 56px); }
+.page-head { background: var(--deep); color: #fff; padding-block: clamp(48px, 8vw, 88px) clamp(32px, 6vw, 56px); }
 .page-head h1 { color: #fff; }
 .page-head p { max-width: 60ch; color: rgba(255, 255, 255, .72); font-size: 1.12rem; }
 .page-head .eyebrow { color: var(--gold); }
@@ -125,7 +127,7 @@ section + section { padding-top: 0; }
   display: grid; grid-template-columns: 56px 1fr; gap: 18px; background: var(--surface);
   border-radius: var(--radius); padding: 24px; box-shadow: 0 2px 18px rgba(28, 43, 30, .09);
 }
-.num { width: 48px; height: 48px; border-radius: 50%; background: var(--ink); color: var(--gold); display: grid; place-items: center; font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; }
+.num { width: 48px; height: 48px; border-radius: 50%; background: var(--deep); color: var(--gold); display: grid; place-items: center; font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; }
 .phase p:last-child { margin-bottom: 0; }
 @media (max-width: 560px) { .phase { grid-template-columns: 1fr; } }
 
