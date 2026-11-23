@@ -129,7 +129,7 @@ PROGRAMME = {
             ], "Il Gate 2 chiude l’incubazione: l’impresa ha partner, sito, piano e governance per partire con il suo primo pilota."),
         ],
         "after_title": "Dopo il Gate 2",
-        "after": "Il pilota e la crescita sono dell’impresa, con i suoi partner e investitori. Imprese Favolose può restare al suo fianco come advisor o nel consiglio.",
+        "after": "Il pilota e la crescita sono dell’impresa, con i suoi partner e investitori. Le persone più adatte di Fab Campaigns e di Imprese Favolose possono entrare nel suo consiglio come advisor.",
         "gov_title": "Governance dal primo giorno",
         "gov_lead": "Ogni gate è una decisione vera, presa con criteri noti in anticipo e documentata.",
         "gov": [
@@ -159,7 +159,7 @@ PROGRAMME = {
             ], "Gate 2 closes incubation: the venture has the partners, site, plan and governance to start its first pilot."),
         ],
         "after_title": "After Gate 2",
-        "after": "The pilot and the growth belong to the venture, with its own partners and investors. Imprese Favolose can stay alongside as an advisor or on the board.",
+        "after": "The pilot and the growth belong to the venture, with its own partners and investors. The right people from Fab Campaigns and Imprese Favolose can join its board as advisors.",
         "gov_title": "Governance from day one",
         "gov_lead": "Every gate is a real decision, taken against criteria known in advance, and written down.",
         "gov": [
